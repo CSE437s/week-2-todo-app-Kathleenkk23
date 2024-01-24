@@ -1,8 +1,8 @@
-// InputField.js
 import React from 'react';
+import './InputField.css'; 
 
 const InputField = ({ values, handleChange, handleAddTodo }) => (
-  <div>
+  <div className='input-field-container'>
     <input
       className='form-input'
       type='text'
@@ -11,7 +11,9 @@ const InputField = ({ values, handleChange, handleAddTodo }) => (
       value={values}
       onChange={handleChange}
     />
-    <button onClick={handleAddTodo}>Add Todo</button>
+    <button className='add-todo-button' onClick={handleAddTodo}>
+      Add Todo
+    </button>
   </div>
 );
 
